@@ -1,0 +1,42 @@
+﻿@page
+@model ProjectRaymondMichael.Pages.DataVisualization.Views.PurchasesModel
+@{
+    ViewData["Title"] = "Purchase History";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VwPurchase[0].DateOfPurchase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VwPurchase[0].Item)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VwPurchase[0].Credits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VwPurchase[0].EmpiricalName)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.VwPurchase) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfPurchase)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Credits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpiricalName)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

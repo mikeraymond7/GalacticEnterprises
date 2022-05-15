@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\DataVisualization\Views\" />
     <Folder Include="Pages\DataVisualization\Procedures\" />
   </ItemGroup>
 
