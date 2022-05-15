@@ -50,5 +50,9 @@ li{
     margin-top: 10%;
 }
 #main{
-    display: none;
+    display:none;
+}
+
+#io{
+    margin-top: 10px;
 }

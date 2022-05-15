@@ -14,6 +14,7 @@ namespace ProjectRaymondMichael
         {
         }
 
+        public virtual DbSet<spAffordable> spAffordables { get; set; } 
         public virtual DbSet<spTotalSales> spTotalSales { get; set; }
         public virtual DbSet<Employee> Employees { get; set; } = null!;
         public virtual DbSet<Item> Items { get; set; } = null!;
@@ -32,6 +33,18 @@ namespace ProjectRaymondMichael
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<spAffordable>(entity =>
+            {
+                entity.HasNoKey();
+                entity.ToTable("spAfforable");
+
+                entity.Property(e => e.Item)
+                    .HasColumnName("name");
+
+                entity.Property(e => e.Credits)
+                    .HasColumnName("credits");
+            });
+
             modelBuilder.Entity<spTotalSales>(entity =>
             { 
                 entity.HasNoKey();
