@@ -6,7 +6,7 @@ namespace ProjectRaymondMichael
 {
     public partial class VwPurchase
     {
-        [Display(Name = "Empirical Name")]
+        [Display(Name = "Empirical Employee")]
         public string EmpiricalName { get; set; } = null!;
         public string Item { get; set; } = null!;
         public int Credits { get; set; }
