@@ -1,0 +1,32 @@
+﻿@page
+@model ProjectRaymondMichael.Pages.TotalSalesModel
+@{
+    ViewData["Title"] = "Sales Analysis";
+    Layout = "_Layout";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.spTotalSale[0].TotalCredits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.spTotalSale[0].Item)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.spTotalSale)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalCredits)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
