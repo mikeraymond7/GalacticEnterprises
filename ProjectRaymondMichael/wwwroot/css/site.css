@@ -1,0 +1,46 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin: auto;
+    margin-bottom: 60px;
+    background-color: #003754;
+    text-align: center;
+    color: white;
+    font-size:1.2rem;
+}
+
+img{
+    height: 300px;
+    width: 350px;
+}
+
+td, th {
+    vertical-align: middle;
+    color: white;
+    border: solid white 3px;
+}
+
+#mainImg {
+    width: 90%;
+    height: 90%;
+    border: solid 1rem white;
+}
+#prelim, #main{
+    margin-top: 10%;
+}
+#main{
+    display: none;
+}
