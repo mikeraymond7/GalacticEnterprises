@@ -4,29 +4,72 @@
     ViewData["Title"] = "Galactic Test";
     <link rel="stylesheet" href="~/css/shop.css" asp-append-version="true" />
     <style>
-    header, footer{
-        display:none;
-    }
+        header, footer{
+            display:none;
+        }
     </style>
 }
 
     <div id="prelim">
+        
         <p>Before we start, how old are you?</p>
-        <input id="age" type="number" />
-        <button class="btn btn-secondary" onclick="checkAge();">Submit</button>
+        <input id="age" type="number" />        
+        <button class="btn btn-secondary" onclick="checkAge();">Submit</button><br />
+        <input type="checkbox" id="padawan"/> Also, click here if you are a padawan
     </div>
     <div id="main">
         <h1>Great! You made it!</h1>
         <h4>Please answer the next couple of questions<br />so we can move the onboarding process along<br />Thank you!</h4>
         <br />
-        Please Enter your name: <br /><input type="text" id="name"/> <br /><br />
-        Please Enter your home planet: <br /><input type="text" id="planet"/> <br /> <br />
-        <button type="button" onclick="displayInfo()">Submit Information</button><br /><br />
+        <div id="favorite">
+            <h4>Who is your favorite Jedi?</h4>
+            <input type="radio" id="Luke" name="jedi" value="Luke Skywalker" />
+            <label for="Luke">Luke Skywalker</label><br />
+            <input type="radio" id="Anakin" name="jedi" value="Anakin Skywalker" />
+            <label for="Anakin">Anakin Skywalker</label><br />
+            <input type="radio" id="Obi-Wan" name="jedi" value="Obi-Wan Kenobi" />
+            <label for="Obi-Wan">Obi-Wan Kenobi</label><br />
+            <input type="radio" id="Ahsoka" name="jedi" value="Ahsoka Tano" />
+            <label for="Ahsoka">Ahsoka Tano</label><br />
+            <input type="radio" id="Yoda" name="jedi" value="Master Yoda" />
+            <label for="Yoda">Master Yoda</label><br />
+            <input type="radio" id="Mace" name="jedi" value="Mace Windu" />
+            <label for="Mace">Mace Windu</label><br />
+            <input type="radio" id="idk" name="jedi" value="someone else" />
+            <label for="idk">someone else</label><br />
+        </div>
+        <div id="inputs">
+            Please Enter your name: <br /><input type="text" id="name"/> <br /><br />
+            Please Enter your home planet: <br /><input type="text" id="planet"/> <br /> <br />
+        </div>
+        
+
+        <div id="submits">
+            Select a Lightsaber Color<br />
+            <select name="color" id="color">
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Red">Red</option>
+                <option value="Purple">Purple</option>
+                <option value="Yellow">Yellow</option>
+            </select>
+            <br />
+            <button id="submit" type="button" onclick="displayInfo()">Submit Information</button><br /><br />
+        </div>
+        <hr />
     </div>
     <div id="dispDiv">
-        <h2 id="disp"></h2>
-        <h2>Now go play in a sarlacc pit or get some portable high ground!<br />The store is officially open!</h2>
+        <img id="Bluelightsaber" class="lightsaber" src="~/img/Blue.png"/>
+        <img id="Greenlightsaber" class="lightsaber" src="~/img/Green.png"/>
+        <img id="Redlightsaber" class="lightsaber" src="~/img/Red.png"/>
+        <img id="Purplelightsaber" class="lightsaber" src="~/img/Purple.png"/>
+        <img id="Yellowlightsaber" class="lightsaber" src="~/img/Yellow.png"/>
+        <br /><br />
+        <h4 id="disp"></h4><br />
+        <h4>Now go play in a sarlacc pit or get some portable high ground!<br />The store is officially open!</h4>
         <br />
-        <button type="button" onclick="clearData()">Take the test again!</button>
+        <button type="button" onclick="clearData()">Take the test again!</button><br /><br />
+        <h4>Click <a asp-page="/Index">here</a> to go check out the home page!</h4>
     </div>
 
+    

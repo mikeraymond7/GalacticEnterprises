@@ -1,7 +1,40 @@
-﻿#prelim, #main {
-    margin-top: 10%;
+﻿#prelim{
+    margin-top: 5%;
 }
 
-#main, #dispDiv {
+#main, #dispDiv, .lightsaber {
     display: none;
+}
+#inputs{
+    float:right;
+}
+
+#favorite{
+    float:left;
+    text-align: left;
+}
+
+
+#submits{
+    margin-top:2%;
+    text-align:center;
+}
+
+#submit{
+    margin-top: 5%;
+}
+
+#main{
+    margin:auto;
+    margin-top: 8%
+}
+
+hr{
+    margin:7%;
+}
+
+img{
+    text-align:center;
+    border: solid black 0.5rem;
+    border-radius: 1rem;
 }
