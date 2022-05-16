@@ -51,12 +51,6 @@ li{
     height: 90%;
     border: solid 1rem white;
 }
-#prelim, #main{
-    margin-top: 10%;
-}
-#main{
-    display:none;
-}
 
 #io{
     margin-top: 10px;

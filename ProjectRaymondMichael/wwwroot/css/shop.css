@@ -1,0 +1,7 @@
+﻿#prelim, #main {
+    margin-top: 10%;
+}
+
+#main, #dispDiv {
+    display: none;
+}

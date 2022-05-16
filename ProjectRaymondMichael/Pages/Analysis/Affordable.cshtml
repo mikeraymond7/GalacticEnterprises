@@ -5,24 +5,18 @@
     ViewData["Title"] = "Affordable Items";
 }
 <h1>@ViewData["Title"]</h1>
-@*
-<div id = "prelim">
-    <p>Before we start, how old are you?</p>
-    <input id="age" type="number"/>
-    <button class="btn btn-secondary" onclick="checkAge();">Submit</button>
-</div>
-<br /><br />
-*@
 
+<br />
 <form class="form-horizontal" method="post" id="moi">
     <div class="form-group">
-        <label for="budget" class="col-sm-2 control-label">Budget:</label>
+        <label for="budget" class="control-label">Enter Your Budget in Credits:</label>
         <div id="io">
             <input type="number" id="budget" value="" name="budget">
             <button type="submit" class="btn btn-secondary">Display Affordable Items</button>
         </div>
      </div>
 </form>
+<br />
 <br />
 <table class="table" id="affordable">
     <thead>

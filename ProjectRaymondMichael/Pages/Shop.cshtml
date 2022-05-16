@@ -1,0 +1,32 @@
+﻿@page "/"
+@model ProjectRaymondMichael.Pages.ShopModel
+@{
+    ViewData["Title"] = "Galactic Test";
+    <link rel="stylesheet" href="~/css/shop.css" asp-append-version="true" />
+    <style>
+    header, footer{
+        display:none;
+    }
+    </style>
+}
+
+    <div id="prelim">
+        <p>Before we start, how old are you?</p>
+        <input id="age" type="number" />
+        <button class="btn btn-secondary" onclick="checkAge();">Submit</button>
+    </div>
+    <div id="main">
+        <h1>Great! You made it!</h1>
+        <h4>Please answer the next couple of questions<br />so we can move the onboarding process along<br />Thank you!</h4>
+        <br />
+        Please Enter your name: <br /><input type="text" id="name"/> <br /><br />
+        Please Enter your home planet: <br /><input type="text" id="planet"/> <br /> <br />
+        <button type="button" onclick="displayInfo()">Submit Information</button><br /><br />
+    </div>
+    <div id="dispDiv">
+        <h2 id="disp"></h2>
+        <h2>Now go play in a sarlacc pit or get some portable high ground!<br />The store is officially open!</h2>
+        <br />
+        <button type="button" onclick="clearData()">Take the test again!</button>
+    </div>
+
