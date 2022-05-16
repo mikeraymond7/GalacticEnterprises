@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace ProjectRaymondMichael.Pages
+namespace ProjectRaymondMichael.Pages.Analysis
 {
     public class TotalSalesModel : PageModel
     {

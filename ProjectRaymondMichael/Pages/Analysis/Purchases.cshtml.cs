@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace ProjectRaymondMichael.Pages.DataVisualization.Views
+namespace ProjectRaymondMichael.Pages.Analysis
 {
     public class PurchasesModel : PageModel
     {

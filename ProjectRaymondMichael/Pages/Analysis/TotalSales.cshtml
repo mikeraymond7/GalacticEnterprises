@@ -1,0 +1,48 @@
+﻿@page
+@model TotalSalesModel
+@{
+    ViewData["Title"] = "Sales Analysis";
+    Layout = "_Layout";
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"> </script>
+    <script src="~/js/gCharts.js"></script>
+    <script>google.charts.setOnLoadCallback(totalSalesCharts);</script>
+}
+
+<h1>@ViewData["Title"]</h1>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.spTotalSale[0].TotalCredits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.spTotalSale[0].Item)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.spTotalSale)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalCredits)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="data" style="display:none;">
+    @foreach(var item in Model.spTotalSale)
+    {
+        @string.Concat(" ,['", @item.Item, " ', ", @item.TotalCredits, "]")
+    }
+</div>
+
+<div id = "pie" class="chart"></div>
+<div id = "bar" class="chart"></div>
+<div id = "line" class="chart"></div>

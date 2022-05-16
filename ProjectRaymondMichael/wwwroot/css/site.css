@@ -41,6 +41,11 @@ li{
     background-color: #003754;
 }
 
+.chart {
+    text-align: center;
+    margin-left: 25%;
+}
+
 #mainImg {
     width: 90%;
     height: 90%;
